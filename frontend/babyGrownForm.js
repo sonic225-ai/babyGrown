@@ -1,26 +1,19 @@
+import { auth, initAuthStateListener } from "./firebase.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+initAuthStateListener();
+
 document.querySelector("form").addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const username = document.querySelector("input[placeholder='Username']").value;
+    const email = document.querySelector("input[placeholder='Username']").value;
     const password = document.querySelector("input[placeholder='Password']").value;
 
     try {
-        const response = await fetch("/api/auth/login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username, password }),
-        });
-        const data = await response.json();
-
-        if (response.ok) {
-            alert("✅ Логин успешна!");
-            localStorage.setItem("token", data.token);
-            window.location.href = "personalAccount.html";  // Переход на новую страницу
-        } else {
-            alert("❌ " + data.message);
-        }
+        await signInWithEmailAndPassword(auth, email, password);
+        alert("✅ Вход успешен!");
+        window.location.href = "personalAccount.html";
     } catch (error) {
-        console.error("Ошибка:", error);
-        alert("❌ Ошибка сервера");
+        alert("❌ " + error.message);
     }
 });

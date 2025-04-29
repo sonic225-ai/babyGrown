@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог детских организаций</title>
+    <link rel="stylesheet" href="baby.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="babyGrownLogo.png" alt="BabyGrown.kz">
+    </div>
+    <nav>
+        <a href="#" class="active">Главная</a>
+        <a href="#">Компании</a>
+        <a href="#">Няни</a>
+        <a href="#">На карте</a>
+    </nav>
+    <div class="buttons">
+        <button class="add-company">➕ Добавить компанию</button>
+        <button class="profile"  onclick="window.location.href='authorization.html'">👤 Личный кабинет</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Каталог детских организаций</h1>
+        <p>Детские сады, образовательные центры, спортивные кружки и многое другое.</p>
+
+        <div class="search-bar">
+            <div class="dropdown">
+                <label>Категория</label>
+                <select>
+                    <option>Детские сады</option>
+                    <option>Кружки</option>
+                    <option>Образовательные центры</option>
+                    <option>Школы</option>
+                </select>
+            </div>
+
+
+            <div class="dropdown">
+                <label for="region-city">Регион / Город</label>
+                <select id="region-city">
+                    <option value="">-- Выберите регион или город --</option>
+        
+                    <optgroup label="Акмолинская область">
+                        <option value="Кокшетау">↳ Кокшетау</option>
+                        <option value="Степногорск">↳ Степногорск</option>
+                        <option value="Атбасар">↳ Атбасар</option>
+                        <option value="Щучинск">↳ Щучинск</option>
+                    </optgroup>
+        
+                    <optgroup label="Актюбинская область">
+                        <option value="Актобе">↳ Актобе</option>
+                        <option value="Алга">↳ Алга</option>
+                        <option value="Хромтау">↳ Хромтау</option>
+                        <option value="Кандыагаш">↳ Кандыагаш</option>
+                    </optgroup>
+        
+                    <optgroup label="Алматинская область">
+                        <option value="Талдыкорган">↳ Талдыкорган</option>
+                        <option value="Капшагай">↳ Капшагай</option>
+                        <option value="Есик">↳ Есик</option>
+                        <option value="Уштобе">↳ Уштобе</option>
+                    </optgroup>
+        
+                    <optgroup label="Атырауская область">
+                        <option value="Атырау">↳ Атырау</option>
+                        <option value="Кульсары">↳ Кульсары</option>
+                    </optgroup>
+        
+                    <optgroup label="Туркестанская область">
+                        <option value="Туркестан">↳ Туркестан</option>
+                        <option value="Арысь">↳ Арысь</option>
+                        <option value="Кентау">↳ Кентау</option>
+                        <option value="Жетысай">↳ Жетысай</option>
+                        <option value="Сарыагаш">↳ Сарыагаш</option>
+                        <option value="Ленгер">↳ Ленгер</option>
+                        <option value="Шардара">↳ Шардара</option>
+                    </optgroup>
+
+                    <option value="Астана">Астана (город)</option>
+                    <option value="Алматы">Алматы (город)</option>
+                    <option value="Шымкент">Шымкент (город)</option>
+                </select>
+            </div>
+        </div>
+        
+
+            <button class="location-btn">📍</button>
+            <button class="search-btn">🔍</button>
+        </div>
+
+        <div class="categories">
+            <div class="category">
+                <img src="https://img.icons8.com/?size=100&id=24715&format=png&color=000000" alt="Детские сады">
+                <p>Детские сады</p>
+            </div>
+            <div class="category">
+                <img src="https://img.icons8.com/?size=100&id=P9sHVPsGAdPi&format=png&color=FA5252" alt="Кружки">
+                <p>Кружки</p>
+            </div>
+            <div class="category">
+                <img src="https://img.icons8.com/?size=100&id=mNk7WaWnXvKr&format=png&color=1A1A1A" alt="Образовательные центры">
+                <p>Образовательные центры</p>
+            </div>
+            <div class="category">
+                <img src="https://img.icons8.com/?size=100&id=EOn31zjdfgcn&format=png&color=1A1A1A" alt="Школы">
+                <p>Школы</p>
+            </div>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="https://i.pinimg.com/736x/05/42/ee/0542eea8f4d911baa7f57b4177e062a6.jpg" alt="Ребёнок">
+    </div>
+</section>
+
+
+<h1>Самые популярные</h1>
+    <section class="popular-schools">
+        <div class="school">
+            <img src="https://almaty.fizmat.kz/wp-content/uploads/sites/2/2017/03/MG_4542.jpg" alt="РФМШ">
+            <h3>НАО "Республиканская физико-математическая школа"</h3>
+            <p>Казахстан, Алматы, бульвар Бухар Жырау, 36</p>
+        </div>
+        <div class="school">
+            <img src="https://tengrinews.kz/userdata/u38/2022-08/resize/11ae15e7dff9399dc0775570ab746ddd.jpeg" alt="TAMOS Education">
+            <h3>TAMOS Education</h3>
+            <p>Алматы, Бостандыкский р-н, ул. Тажибаевой, 204</p>
+        </div>
+        <div class="school">
+            <img src="https://allart.kz/wp-content/uploads/2022/11/5a771dfaf4aa8ce4507f9167da7bb381.jpg" alt="Haileybury Алматы">
+            <h3>Школа Haileybury Almaty</h3>
+            <p>Алматы, Медеуский р-н, пр. Аль-Фараби, 112</p>
+        </div>
+        <div class="school">
+            <img src="https://cachizer2.2gis.com/reviews-photos/bbd8a76e-252b-426a-858f-f43caeec0652.jpg?w=1920" alt="Школа-лицей Maqsat">
+            <h3>Школа-лицей Maqsat</h3>
+            <p>Алматы, Наурызбайский р-н, мкр. Калкаман-2, ул. Сыпатай Батыра, 23</p>
+        </div>
+    </section>
+    
+
+
+    <p>Мы собрали для Вас все детские организации, чтобы Вам было удобно и легко подобрать лучшее для вашего ребенка!</p>
+        </div>
+        <div class="footer-section">
+            <h3>Навигация</h3>
+            <a href="#">Главная страница</a>
+            <a href="#">Новости</a>
+            <a href="#">Блог</a>
+        </div>
+        <div class="footer-section">
+            <h3>Документы</h3>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Договор публичной оферты для физических лиц</a>
+            <a href="#">Договор публичной оферты для юридических лиц</a>
+        </div>
+        <div class="footer-section">
+            <h3>Контакты</h3>
+            <p>г. Алматы, пр. Аль-Фараби 7, БЦ "Нурлы-Тау", блок 5а, 29 этаж, офис 3</p>
+            <p>Номер телефона: <span class="highlight">+7 (707) 444-13-45</span></p>
+            <p>Email: <a href="mailto:info@mykid.kz" class="highlight">info@mykid.kz</a></p>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2025 MyKid.kz | Все права защищены</p>
+        <p>РАЗРАБОТКА САЙТОВ - ВЕБ СТУДИЯ <span class="highlight">init</span></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать, <span id="username"></span>!</h1>
+        <p>Ваш email: <span id="email"></span></p>
+        <button id="logout">Выйти</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const token = localStorage.getItem("token");
+            if (!token) {
+                window.location.href = "/babyGrown.html";
+                return;
+            }
+            
+            try {
+                const response = await fetch("/api/protected", {
+                    method: "GET",
+                    headers: { 
+                        "Authorization": `Bearer ${token}`,
+                        "Content-Type": "application/json"
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error("Ошибка авторизации");
+                }
+                
+                const data = await response.json();
+                if (data.user) {
+                    document.getElementById("username").textContent = data.user.username;
+                    document.getElementById("email").textContent = data.user.email;
+                } else {
+                    throw new Error("Нет данных пользователя");
+                }
+            } catch (error) {
+                console.error("Ошибка запроса:", error);
+                localStorage.removeItem("token");
+                window.location.href = "/babyGrown.html";
+            }
+            
+            document.getElementById("logout").addEventListener("click", () => {
+                localStorage.removeItem("token");
+                window.location.href = "/babyGrownFormPassword.html";
+            });
+        });
+    </script>
+</body>
+</html>

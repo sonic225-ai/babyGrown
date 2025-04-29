@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/*- Общие стили */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fcfbfb;
+  background-image: url("babyGrownBackground.png");
+  color: #d85d8a;
+}
+
+.header__logo {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .header__logo {
+    width: 100px;
+  }
+}
+
+.header__list {
+  font-family: 'Roboto', sans-serif;
+  color: #FF0080;
+  font-weight: bold;
+}
+
+/* Приветственная секция */
+.welcome {
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin-top: -100px;
+  padding: 240px 0;
+  background-image: url("babyGrownBabyPhoto.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome__text {
+  width: 550px;
+}
+
+.welcome__subtitle {
+  margin-bottom: 7px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.welcome__title {
+  font-size: 58px;
+}
+
+.welcome__desc {
+  margin: 40px 0;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+a {
+  color: #FF0080;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin-top: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 165px;
+  height: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: #FF0080;
+  color: white;
+  border-radius: 5px;
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn--small {
+  width: 140px;
+  height: 40px;
+  font-size: 12px;
+}
+
+/*- Шапка */
+.header {
+  padding: 25px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  gap: 30px;
+}
+
+.header__nav a {
+  font-size: 14px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.header__nav a.active {
+  opacity: 1;
+}
+
+.header__nav a:hover {
+  opacity: 0.9;
+}
